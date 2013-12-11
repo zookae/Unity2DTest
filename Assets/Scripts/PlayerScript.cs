@@ -51,4 +51,9 @@ public class PlayerScript : MonoBehaviour {
             transform.position.z);
         #endregion
     }
+
+    void OnDestroy() {
+        // add a gameover menu script to something in the scene when player is destroyed
+        transform.parent.gameObject.AddComponent<GameOverScript>();
+    }
 }
