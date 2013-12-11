@@ -31,6 +31,7 @@ public class PlayerScript : MonoBehaviour {
             if (weapon != null) {
                 // false b/c player is not an enemy
                 weapon.Attack(false);
+                SoundEffectsHelper.Instance.MakePlayerShotSound(); // sound for firing
             }
         }
         #endregion
